@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="ОАиП_ЛущилинаАА_ИР.Autentification"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ОАиП_ЛущилинаАА_ИР"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Height="80" Margin="0,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="32" FontWeight="Bold"><Run Text="Информационная система"/><Run Text=" магазина автозапчастей"/></TextBlock>
+        <Grid x:Name="autorizationLayout" >
+            <TextBlock HorizontalAlignment="Center" Height="36" Margin="0,251,0,0" Text="Авторизация" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="24" FontWeight="Normal"/>
+            <TextBox x:Name="LoginBox" HorizontalAlignment="Center" Height="36" Margin="0,307,0,0" PlaceholderText="Логин или электронная почта" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="16" Background="#66FFFFFF" BorderBrush="#669E6BFF" PlaceholderForeground="#FF939393" FontWeight="Normal" TextChanged="LoginBox_SelectionChanged" KeyDown="LoginBox_KeyDown"/>
+            <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Center" Height="36" Margin="0,364,0,0" PlaceholderText="Пароль" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="16" Background="#66FFFFFF" BorderBrush="#669E6BFF" FontWeight="Normal" Padding="10,3,6,6" KeyDown="PasswordBox_KeyDown"/>
+            <Button x:Name="LoginButton" Content="Войти" IsEnabled="False"  HorizontalAlignment="Center" Height="40" Width="487" FontFamily="Lato" FontSize="16" Background="#669E6BFF" Margin="0,420,0,0" VerticalAlignment="Top" Click="LoginButton_Click"/>
+            <Button x:Name="ForgotPassBtn" HorizontalAlignment="Center" IsEnabled="False" Content="Забыли пароль?" Height="40" Margin="0,477,0,0" VerticalAlignment="Top" Width="487" Background="#33FFFFFF" FocusVisualPrimaryBrush="#33FFFFFF" Foreground="Black" Click="ForgotPassBtn_Click"/>
+        </Grid>
+        <Grid x:Name="passwordResetLayout" Visibility="Collapsed">
+            <TextBlock HorizontalAlignment="Center" Height="36" Margin="0,251,0,0" Text="Восстановление пароля" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="24" FontWeight="Normal"/>
+            <TextBlock HorizontalAlignment="Center" Height="21" Margin="0,300,0,0" Text="Вы можете" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="16" FontWeight="Normal"/>
+            <Button x:Name="SendRequestBtn" Height="39" Margin="0,291,0,0" Content="Оставить заявку администратору" VerticalAlignment="Top" Width="273" FontFamily="Lato" FontSize="16" FontWeight="Normal" Foreground="#FFD8C4FF" Background="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" HorizontalAlignment="Center" Click="SendRequestBtn_Click"  />
+            <TextBlock HorizontalAlignment="Center" Height="21" Margin="0,330,0,0" Text="или восстановить пароль, заполнив форму ниже" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="16" FontWeight="Normal"/>
+
+            <TextBox x:Name="question1" HorizontalAlignment="Center" Height="37" Margin="0,366,0,0" PlaceholderText="Ваша фамилия" TextWrapping="Wrap" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="16" Background="#66FFFFFF" BorderBrush="#669E6BFF" PlaceholderForeground="#FF939393" FontWeight="Normal" />
+            <TextBox x:Name="question2" HorizontalAlignment="Center" Height="36" Margin="0,424,0,0" PlaceholderText="Код вашей группы" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="16" Background="#66FFFFFF" BorderBrush="#669E6BFF" FontWeight="Normal" Padding="10,3,6,6" />
+            <PasswordBox x:Name="NewPassword" HorizontalAlignment="Center" Height="36" Margin="0,482,0,0" PlaceholderText="Новый пароль" VerticalAlignment="Top" Width="486" FontFamily="Lato" FontSize="16" Background="#66FFFFFF" BorderBrush="#669E6BFF" FontWeight="Normal" Padding="10,3,6,6" />
+            <Button x:Name="ResetButton" Content="Восстановить пароль" HorizontalAlignment="Center" Height="40" Width="235" FontFamily="Lato" FontSize="16" Background="#669E6BFF" Margin="-248,538,0,0" VerticalAlignment="Top" Click="ResetButton_Click" />
+            <Button x:Name="CancelButton" Content="Отмена" Height="40" Width="235" HorizontalAlignment="Center" FontFamily="Lato" FontSize="16" Background="#669E6BFF" Margin="248,538,0,0" VerticalAlignment="Top" Click="CancelButton_Click"/>
+        </Grid>
+
+
+    </Grid>
+</Page>
